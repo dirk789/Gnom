@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Website by GNOM Studio 2020 - https://gnom.studio -->
 
 <head>
   <title>GNOM Studio</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://use.typekit.net/vey4lix.css">
+  <style>
+    .fab-big {
+      transform: scale(50);
+      transition: .5s ease-in-out;
+    }
+
+    .rotate-45 {
+      transform: rotate(45deg);
+    }
+
+    header>svg {
+      fill: black;
+      transition: .6s ease-in-out;
+    }
+
+    .white_logo {
+      fill: white;
+      transition: .6s ease-in-out;
+    }
+  </style>
 </head>
 
-<body class="box-border h-screen ">
+<body class="box-border h-screen md:overflow-y-hidden">
 
-  <div class="text-center flex justify-center my-8 w-full fixed z-10 top-0">
+  <header class="text-center flex justify-center my-8 w-full fixed z-10 top-0">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1070.6 322.97" class="w-48">
       <g data-name="Layer 2">
         <g data-name="Layer 1">
@@ -18,17 +40,69 @@
         </g>
       </g>
     </svg>
+  </header>
+
+  <div class="md:flex  items-center text-center text-7xl homeText mt-48 md:mt-16 w-full" style="height: 90vh">
+    <div class="md:w-1/3">
+      <h1 id="we" class="we align-center text-7xl text-center cursor-pointer inline relative">WE</h1>
+    </div>
+    <div class="md:w-1/3">
+      <h1 id="help" class="help align-center text-7xl text-center cursor-pointer inline relative">HELP</h1>
+    </div>
+    <div class="md:w-1/3">
+      <h1 id="you" class="you align-center text-7xl text-center cursor-pointer inline relative">YOU</h1>
+    </div>
   </div>
 
-  <div class="md:flex justify-around items-center text-center text-7xl homeText mt-16" style="height: 90vh">
-    <h1 class="we align-center text-7xl text-center cursor-pointer inline relative">WE</h1>
-    <h1 class="help align-center text-7xl text-center cursor-pointer inline relative">HELP</h1>
-    <h1 class="you align-center text-7xl text-center cursor-pointer inline relative">YOU</h1>
+  <!-- Contact FAB & modal code -->
+  <div
+    class="fab cursor-pointer w-16 h-16 rounded-full bg-black fixed bottom-0 right-0 text-white flex items-center content-center justify-center p-4 mr-8 mb-8 duration-500 transition-all ease-in-out">
   </div>
+  <svg class="fab--inner cursor-pointer fixed w-12 right-0 bottom-0 mr-10 mb-10" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512">
+    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+      d="M256 112v288M400 256H112" /></svg>
 
+  <div class="modal--fab text-white fixed top-0 left-0 w-full">
+    <div class="flex container mx-auto mt-32 flex-col md:flex-row">
+      <div class="w-full md:w-1/2"">
+        <h1 class=" text-4xl mb-4">Let the Gnomes help you!</h1>
+      </div>
+      <form class="w-full md:w-1/2">
+        <label class="block text-white text-sm font-bold mb-2" for="username">
+          Name
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4"
+          type="text" placeholder="Username">
+        <label class="block text-white text-sm font-bold" for="username">
+          Email
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4"
+          type="text" placeholder="Username">
+        <label class="block text-white text-sm font-bold" for="username">
+          Message
+        </label>
+        <textarea
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4"
+          placeholder="Username"></textarea>
+        <button
+          class="bg-white hover:bg-gray-200 text-black mt-4 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+          type="button">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
 
   <!-- Modal for WE-->
   <div class="we--modal fixed top-0 right-0 w-full md:w-2/3 h-screen bg-white hidden">
+    <div id="we-close"
+      class="w-8 h-8  md:hidden flex ml-auto mr-4 mt-4 rounded-full border-black border-2 border-solid mt-32 md:mt-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+          d="M368 368L144 144M368 144L144 368" /></svg></div>
     <div class="p-12 md:p-48 flex justify-around">
       <figure>
         <div class="w-48 h-48 bg-gray-400"></div>
@@ -42,15 +116,22 @@
   </div>
 
   <!-- Modal for HELP -->
-  <div class="help--modal w-full h-screen bg-white hidden">
-    <div class="fixed top-0 left-0 h-screen w-1/3 bg-white flex content-center">
-      <div class="self-center">
+  <div class="help--modal md:w-full h-screen bg-white hidden">
+    <div class="fixed top-0 left-0 h-screen w-full md:w-1/3 bg-white flex md:content-center pt-32">
+      <div id="help-close"
+        class="w-8 h-8  md:hidden flex ml-auto mr-4 rounded-full border-black border-2 border-solid mt-32 md:mt-0 absolute top-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+            d="M368 368L144 144M368 144L144 368" /></svg>
+      </div>
+      <div class="md:self-center h-64 md:h-screen">
         <h1>TEST</h1>
       </div>
+
     </div>
 
-    <div class="fixed top-0 right-0 h-screen w-1/3 bg-white flex content-center">
-      <div class="self-center">
+    <div class="fixed mt-64 md:mt-0 top-0 right-0 h-screen w-full md:w-1/3 bg-white flex md:content-center">
+      <div class="md:self-center h-64 md:h-screen">
         <h1>ENNNN</h1>
       </div>
     </div>
@@ -58,6 +139,11 @@
 
   <!-- Modal for YOU-->
   <div class="you--modal fixed top-0 left-0 w-full md:w-2/3 h-screen bg-white hidden">
+    <div id="you-close"
+      class="w-8 h-8  md:hidden flex ml-auto mr-4 mt-4 rounded-full border-black border-2 border-solid mt-32 md:mt-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+          d="M368 368L144 144M368 144L144 368" /></svg></div>
     <div class="p-12 md:p-48 flex justify-around">
       <figure>
         <div class="w-48 h-48 bg-gray-400"></div>
@@ -75,8 +161,8 @@
 
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="src/js/script.js"></script>
 </body>
 
