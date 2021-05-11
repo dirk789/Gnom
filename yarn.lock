@@ -2725,9 +2725,9 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 lodash@^4.17.11, lodash@^4.17.3:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loglevel@^1.4.1:
   version "1.6.1"
@@ -4722,6 +4722,11 @@ svgo@^0.7.0:
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"
+
+tailwind-percentage-heights-plugin@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/tailwind-percentage-heights-plugin/-/tailwind-percentage-heights-plugin-0.1.4.tgz#78fc5f161c248a5cd8582d0ba5b91767a3a53dc2"
+  integrity sha512-t6lsZjaIaQs4pLL7jDJN1jn8dwWHZmYPI8f9tJskDxZYOeOYLHhBacu/m7Mqq/nZQJcY1Y03O/S4KrZgiG/Evg==
 
 tailwindcss@^1.0.0-beta.3:
   version "1.0.0-beta.3"
